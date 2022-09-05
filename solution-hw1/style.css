@@ -93,13 +93,13 @@ nav ul li a {
 
 .size_menu {
   border-style: solid;
-  border-width: 2px;
+  border-width: 3px;
   padding: 8px 12px 8px 12px;
 }
 
 .size_menu_12 {
   border-style: solid;
-  border-width: 2px;
+  border-width: 3px;
   padding: 8px;
 }
 
@@ -117,20 +117,20 @@ nav ul li a {
 
 .product select {
   appearance: none;
-  padding: 3px;
-  border-width: 2px;
+  padding: 5px;
+  border-width: 3px;
   border-color: black;
-  width: 168px;
-  height: 35px;
+  width: 176px;
+  height: 40px;
   font-size: 18px;
   background: url(https://www.shareicon.net/data/16x16/2015/09/15/640844_down_512x512.png) no-repeat calc(100% - 4px);
 }
 
 .product input[type='submit'] {
-  border-width: 2px;
+  border-width: 3px;
   border-color: black;
-  width: 168px;
-  height: 40px;
+  width: 176px;
+  height: 45px;
   background-color: white;
   font-weight: bold;
   font-size: 22px;
