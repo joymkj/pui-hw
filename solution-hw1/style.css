@@ -93,10 +93,13 @@ nav ul li a {
 }
 
 .product select {
+  appearance: none;
+  padding: 3px;
   border-width: 2px;
   border-color: black;
   width: 139px;
   height: 35px;
+  background: url(https://www.shareicon.net/data/16x16/2015/09/15/640844_down_512x512.png) no-repeat calc(100% - 4px);
 }
 
 .product input[type='submit'] {
