@@ -47,7 +47,7 @@ nav ul li a {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  padding-bottom: 260px;
+  padding-bottom: 330px;
 }
 
 .col {
@@ -84,9 +84,27 @@ nav ul li a {
 
 .size_menu {
   border-style: solid;
-  padding: 6px;
+  border-width: 2px;
+  padding: 8px;
 }
 
 .product input[type='radio']:checked + label {
   background-color: grey;
+}
+
+.product select {
+  border-width: 2px;
+  border-color: black;
+  width: 139px;
+  height: 35px;
+}
+
+.product input[type='submit'] {
+  border-width: 2px;
+  border-color: black;
+  width: 139px;
+  height: 40px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 22px;
 }
