@@ -71,6 +71,14 @@ nav ul li a {
   height: 300px;
 }
 
+.cell-right {
+  text-align: right;
+}
+
+.cell-left {
+  text-align: left;
+}
+
 .product {
   height: 100px;
   /* border-style: solid; */
