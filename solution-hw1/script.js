@@ -29,9 +29,18 @@ function addToCart(event) {
   cart.push(roll);
   total_price += price;
   number_of_items++;
-
-  console.log(cart);
+  cart_popup(type, glazing, packSize, price);
 }
+
+function cart_popup(type, glazing, packSize, price) {
+  var popup = document.querySelector('.cart-popup');
+  popup.style.visibility = 'visible';
+  popup.innerHTML += '<p><b>' + type + '</b></p>';
+  popup.innerHTML += '<p>' + glazing + '</p>';
+  popup.innerHTML += '<p>Pack of ' + packSize + '</p>';
+  popup.innerHTML += '<p>Price: $ ' + price + '</p>';
+}
+
 function glazingChange(element) {
   const glazing_price = parseFloat(element.value);
   var product = element.closest('.product');

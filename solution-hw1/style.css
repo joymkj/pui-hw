@@ -46,7 +46,21 @@ nav ul li a {
 .cart-info {
   margin: 0 100px 0 0;
   text-align: right;
-  /* visibility: hidden; */
+}
+
+.cart-popup {
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  border: 1px solid;
+  border-color: grey;
+  margin-right: 50px;
+  margin-left: 500px;
+  visibility: hidden;
+}
+
+.cart-popup p {
+  margin: 6px;
 }
 
 .header h1 {
