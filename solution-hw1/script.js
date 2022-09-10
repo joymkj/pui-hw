@@ -42,6 +42,18 @@ function glazingChange(element) {
   product.getElementsByClassName('price')[0].innerText = '$ ' + newPrice;
 }
 
+function updatePackSize(element) {
+  const packSize = element.value;
+  var product = element.closest('.product');
+  var type = product.getElementsByClassName('product-name')[0].innerText;
+  var glaze_ref = product.getElementsByClassName('glaze_menu')[0];
+  var glazing_price = parseFloat(glaze_ref.options[glaze_ref.selectedIndex].value);
+  console.log('Pack size: ' + packSize + 'type: ' + type + 'glazing price: ' + glazing_price);
+  var newPrice = calculatePrice(type, packSize, glazing_price);
+  console.log('newprice ' + newPrice);
+  product.getElementsByClassName('price')[0].innerText = '$ ' + newPrice;
+}
+
 function calculatePrice(type, packSize, glazing_price) {
   var basePrice = 0;
   switch (type) {
