@@ -8,7 +8,7 @@ class Roll {
 }
 
 let cart = [];
-let total_price = 0;
+let total_price = 0.0;
 let number_of_items = 0;
 var addToCartButtons = document.getElementsByClassName('add-to-cart');
 
@@ -30,12 +30,12 @@ function addToCart(event) {
   total_price += parseFloat(price);
   number_of_items++;
   updateCart();
-  cart_popup(type, glazing, packSize, price);
+  cart_popup(type, glazing, packSize, parseFloat(price));
 }
 
 function updateCart() {
   var cartInfo = document.querySelector('.cart-info');
-  cartInfo.innerHTML = number_of_items + ' items<br />Total: $ ' + total_price;
+  cartInfo.innerHTML = number_of_items + ' items<br />Total: $ ' + total_price.toFixed(2);
 }
 
 function cart_popup(type, glazing, packSize, price) {
@@ -46,7 +46,7 @@ function cart_popup(type, glazing, packSize, price) {
   popup.innerHTML += '<p><b>' + type + '</b></p>';
   popup.innerHTML += '<p>' + glazing + ' glazing</p>';
   popup.innerHTML += '<p>Pack of ' + packSize + '</p>';
-  popup.innerHTML += '<p>Price: $ ' + price + '</p>';
+  popup.innerHTML += '<p>Price: $ ' + price.toFixed(2) + '</p>';
   setTimeout(hideCartPopup, 3000);
 }
 
@@ -106,7 +106,7 @@ function calculatePrice(type, packSize, glazing_price) {
   console.log('Baseprice ' + basePrice);
   console.log('glazing price ' + glazing_price);
   console.log('pack size ' + packSize);
-  var newPrice = (basePrice + glazing_price) * packSize;
+  var newPrice = parseFloat((basePrice + glazing_price) * packSize).toFixed(2);
   console.log('New price' + newPrice);
   return newPrice;
 }
