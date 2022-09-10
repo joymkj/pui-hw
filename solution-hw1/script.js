@@ -36,7 +36,7 @@ function cart_popup(type, glazing, packSize, price) {
   var popup = document.querySelector('.cart-popup');
   popup.style.visibility = 'visible';
   popup.innerHTML += '<p><b>' + type + '</b></p>';
-  popup.innerHTML += '<p>' + glazing + '</p>';
+  popup.innerHTML += '<p>' + glazing + ' glazing</p>';
   popup.innerHTML += '<p>Pack of ' + packSize + '</p>';
   popup.innerHTML += '<p>Price: $ ' + price + '</p>';
 }
