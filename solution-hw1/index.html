@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bun Bun Bake Shop</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -29,7 +30,7 @@
         <div class="col">
           <div class="product">
             <img src="assets/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll" />
-            <h2>Original cinnamon roll</h2>
+            <h2 class="product-name">Original cinnamon roll</h2>
             <form>
               <table>
                 <tr>
@@ -46,19 +47,19 @@
                 <tr>
                   <td><p>Pack size:</p></td>
                   <td class="cell-right">
-                    <input type="radio" id="og_1" name="pack_size_og" value="1" checked />
+                    <input type="radio" id="og_1" name="pack_size" value="1" checked />
                     <label for="og_1" class="size_menu">1</label>
-                    <input type="radio" id="og_3" name="pack_size_og" value="3" />
+                    <input type="radio" id="og_3" name="pack_size" value="3" />
                     <label for="og_3" class="size_menu">3</label>
-                    <input type="radio" id="og_6" name="pack_size_og" value="6" />
+                    <input type="radio" id="og_6" name="pack_size" value="6" />
                     <label for="og_6" class="size_menu">6</label>
-                    <input type="radio" id="og_12" name="pack_size_og" value="12" />
-                    <label for="og_12" class="size_menu_12">12</label>
+                    <input type="radio" id="og_12" name="pack_size" value="12" />
+                    <label for="og_12" class="size_menu size_menu_12">12</label>
                   </td>
                 </tr>
                 <tr>
-                  <td><h2>$ 2.49</h2></td>
-                  <td class="cell-right"><input type="submit" value="Add to Cart" /></td>
+                  <td><h2 class="price">$ 2.49</h2></td>
+                  <td class="cell-right"><input type="button" class="add-to-cart" value="Add to Cart" /></td>
                 </tr>
               </table>
             </form>
@@ -67,7 +68,7 @@
         <div class="col">
           <div class="product">
             <img src="assets/apple-cinnamon-roll.jpg" alt="Apple cinnamon roll" />
-            <h2>Apple cinnamon roll</h2>
+            <h2 class="product-name">Apple cinnamon roll</h2>
             <form>
               <table>
                 <tr>
@@ -84,19 +85,19 @@
                 <tr>
                   <td><p>Pack size:</p></td>
                   <td class="cell-right">
-                    <input type="radio" id="ac_1" name="pack_size_ac" value="1" checked />
+                    <input type="radio" id="ac_1" name="pack_size" value="1" checked />
                     <label for="ac_1" class="size_menu">1</label>
-                    <input type="radio" id="ac_3" name="pack_size_ac" value="3" />
+                    <input type="radio" id="ac_3" name="pack_size" value="3" />
                     <label for="ac_3" class="size_menu">3</label>
-                    <input type="radio" id="ac_6" name="pack_size_ac" value="6" />
+                    <input type="radio" id="ac_6" name="pack_size" value="6" />
                     <label for="ac_6" class="size_menu">6</label>
-                    <input type="radio" id="ac_12" name="pack_size_ac" value="12" />
-                    <label for="ac_12" class="size_menu_12">12</label>
+                    <input type="radio" id="ac_12" name="pack_size" value="12" />
+                    <label for="ac_12" class="size_menu size_menu_12">12</label>
                   </td>
                 </tr>
                 <tr>
-                  <td><h2>$ 3.49</h2></td>
-                  <td class="cell-right"><input type="submit" value="Add to Cart" /></td>
+                  <td><h2 class="price">$ 3.49</h2></td>
+                  <td class="cell-right"><input type="button" class="add-to-cart" value="Add to Cart" /></td>
                 </tr>
               </table>
             </form>
@@ -105,7 +106,7 @@
         <div class="col">
           <div class="product">
             <img src="assets/raisin-cinnamon-roll.jpg" alt="Raisin cinnamon roll" />
-            <h2>Raisin cinnamon roll</h2>
+            <h2 class="product-name">Raisin cinnamon roll</h2>
             <form>
               <table>
                 <tr>
@@ -122,19 +123,19 @@
                 <tr>
                   <td><p>Pack size:</p></td>
                   <td class="cell-right">
-                    <input type="radio" id="rc_1" name="pack_size_rc" value="1" checked />
+                    <input type="radio" id="rc_1" name="pack_size" value="1" checked />
                     <label for="rc_1" class="size_menu">1</label>
-                    <input type="radio" id="rc_3" name="pack_size_rc" value="3" />
+                    <input type="radio" id="rc_3" name="pack_size" value="3" />
                     <label for="rc_3" class="size_menu">3</label>
-                    <input type="radio" id="rc_6" name="pack_size_rc" value="6" />
+                    <input type="radio" id="rc_6" name="pack_size" value="6" />
                     <label for="rc_6" class="size_menu">6</label>
-                    <input type="radio" id="rc_12" name="pack_size_rc" value="12" />
-                    <label for="rc_12" class="size_menu_12">12</label>
+                    <input type="radio" id="rc_12" name="pack_size" value="12" />
+                    <label for="rc_12" class="size_menu size_menu_12">12</label>
                   </td>
                 </tr>
                 <tr>
-                  <td><h2>$ 2.99</h2></td>
-                  <td class="cell-right"><input type="submit" value="Add to Cart" /></td>
+                  <td><h2 class="price">$ 2.99</h2></td>
+                  <td class="cell-right"><input type="button" class="add-to-cart" value="Add to Cart" /></td>
                 </tr>
               </table>
             </form>
@@ -145,7 +146,7 @@
         <div class="col">
           <div class="product">
             <img src="assets/walnut-cinnamon-roll.jpg" alt="Walnut cinnamon roll" />
-            <h2>Walnut cinnamon roll</h2>
+            <h2 class="product-name">Walnut cinnamon roll</h2>
             <form>
               <table>
                 <tr>
@@ -162,19 +163,19 @@
                 <tr>
                   <td><p>Pack size:</p></td>
                   <td class="cell-right">
-                    <input type="radio" id="wc_1" name="pack_size_wc" value="1" checked />
+                    <input type="radio" id="wc_1" name="pack_size" value="1" checked />
                     <label for="wc_1" class="size_menu">1</label>
-                    <input type="radio" id="wc_3" name="pack_size_wc" value="3" />
+                    <input type="radio" id="wc_3" name="pack_size" value="3" />
                     <label for="wc_3" class="size_menu">3</label>
-                    <input type="radio" id="wc_6" name="pack_size_wc" value="6" />
+                    <input type="radio" id="wc_6" name="pack_size" value="6" />
                     <label for="wc_6" class="size_menu">6</label>
-                    <input type="radio" id="wc_12" name="pack_size_wc" value="12" />
-                    <label for="wc_12" class="size_menu_12">12</label>
+                    <input type="radio" id="wc_12" name="pack_size" value="12" />
+                    <label for="wc_12" class="size_menu size_menu_12">12</label>
                   </td>
                 </tr>
                 <tr>
-                  <td><h2>$ 3.49</h2></td>
-                  <td class="cell-right"><input type="submit" value="Add to Cart" /></td>
+                  <td><h2 class="price">$ 3.49</h2></td>
+                  <td class="cell-right"><input type="button" class="add-to-cart" value="Add to Cart" /></td>
                 </tr>
               </table>
             </form>
@@ -183,7 +184,7 @@
         <div class="col">
           <div class="product">
             <img src="assets/double-chocolate-cinnamon-roll.jpg" alt="Double chocolate cinnamon roll" />
-            <h2>Double-chocolate cinnamon roll</h2>
+            <h2 class="product-name">Double-chocolate cinnamon roll</h2>
             <form>
               <table>
                 <tr>
@@ -200,19 +201,19 @@
                 <tr>
                   <td><p>Pack size:</p></td>
                   <td class="cell-right">
-                    <input type="radio" id="dc_1" name="pack_size_dc" value="1" checked />
+                    <input type="radio" id="dc_1" name="pack_size" value="1" checked />
                     <label for="dc_1" class="size_menu">1</label>
-                    <input type="radio" id="dc_3" name="pack_size_dc" value="3" />
+                    <input type="radio" id="dc_3" name="pack_size" value="3" />
                     <label for="dc_3" class="size_menu">3</label>
-                    <input type="radio" id="dc_6" name="pack_size_dc" value="6" />
+                    <input type="radio" id="dc_6" name="pack_size" value="6" />
                     <label for="dc_6" class="size_menu">6</label>
-                    <input type="radio" id="dc_12" name="pack_size_dc" value="12" />
-                    <label for="dc_12" class="size_menu_12">12</label>
+                    <input type="radio" id="dc_12" name="pack_size" value="12" />
+                    <label for="dc_12" class="size_menu size_menu_12">12</label>
                   </td>
                 </tr>
                 <tr>
-                  <td><h2>$ 3.99</h2></td>
-                  <td class="cell-right"><input type="submit" value="Add to Cart" /></td>
+                  <td><h2 class="price">$ 3.99</h2></td>
+                  <td class="cell-right"><input type="button" class="add-to-cart" value="Add to Cart" /></td>
                 </tr>
               </table>
             </form>
@@ -221,7 +222,7 @@
         <div class="col">
           <div class="product">
             <img src="assets/strawberry-cinnamon-roll.jpg" alt="strawberry cinnamon roll" />
-            <h2>Strawberry cinnamon roll</h2>
+            <h2 class="product-name">Strawberry cinnamon roll</h2>
             <form>
               <table>
                 <tr>
@@ -238,19 +239,19 @@
                 <tr>
                   <td><p>Pack size:</p></td>
                   <td class="cell-right">
-                    <input type="radio" id="sc_1" name="pack_size_sc" value="1" checked />
+                    <input type="radio" id="sc_1" name="pack_size" value="1" checked />
                     <label for="sc_1" class="size_menu">1</label>
-                    <input type="radio" id="sc_3" name="pack_size_sc" value="3" />
+                    <input type="radio" id="sc_3" name="pack_size" value="3" />
                     <label for="sc_3" class="size_menu">3</label>
-                    <input type="radio" id="sc_6" name="pack_size_sc" value="6" />
+                    <input type="radio" id="sc_6" name="pack_size" value="6" />
                     <label for="sc_6" class="size_menu">6</label>
-                    <input type="radio" id="sc_12" name="pack_size_sc" value="12" />
-                    <label for="sc_12" class="size_menu_12">12</label>
+                    <input type="radio" id="sc_12" name="pack_size" value="12" />
+                    <label for="sc_12" class="size_menu size_menu_12">12</label>
                   </td>
                 </tr>
                 <tr>
-                  <td><h2>$ 3.99</h2></td>
-                  <td class="cell-right"><input type="submit" value="Add to Cart" /></td>
+                  <td><h2 class="price">$ 3.99</h2></td>
+                  <td class="cell-right"><input type="button" class="add-to-cart" value="Add to Cart" /></td>
                 </tr>
               </table>
             </form>
