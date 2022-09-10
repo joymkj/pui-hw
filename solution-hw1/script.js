@@ -10,6 +10,7 @@ class Roll {
 let cart = [];
 let total_price = 0.0;
 let number_of_items = 0;
+var timeout;
 var addToCartButtons = document.getElementsByClassName('add-to-cart');
 
 for (var i = 0; i < addToCartButtons.length; i++) {
@@ -42,18 +43,17 @@ function cart_popup(type, glazing, packSize, price) {
   hideCartPopup();
   var popup = document.querySelector('.cart-popup');
   popup.style.visibility = 'visible';
-  clearTimeout();
+  clearTimeout(timeout);
   popup.innerHTML += '<p><b>' + type + '</b></p>';
   popup.innerHTML += '<p>' + glazing + ' glazing</p>';
   popup.innerHTML += '<p>Pack of ' + packSize + '</p>';
   popup.innerHTML += '<p>Price: $ ' + price.toFixed(2) + '</p>';
-  setTimeout(hideCartPopup, 3000);
+  timeout = setTimeout(hideCartPopup, 3000);
 }
 
 function hideCartPopup() {
   var popup = document.querySelector('.cart-popup');
   popup.style.visibility = 'hidden';
-  clearTimeout();
   popup.innerHTML = '<p>Added to cart: <br /><br /></p>';
 }
 
