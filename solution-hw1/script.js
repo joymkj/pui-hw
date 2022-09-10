@@ -39,6 +39,7 @@ function glazingChange(element) {
   var type = product.getElementsByClassName('product-name')[0].innerText;
   var newPrice = calculatePrice(type, packSize, glazing_price);
   console.log('newprice ' + newPrice);
+  product.getElementsByClassName('price')[0].innerText = '$ ' + newPrice;
 }
 
 function calculatePrice(type, packSize, glazing_price) {
