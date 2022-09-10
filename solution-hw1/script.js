@@ -27,9 +27,15 @@ function addToCart(event) {
   var packSize = product.querySelector('input[name="pack_size"]:checked').value;
   const roll = new Roll(type, price, glazing, packSize);
   cart.push(roll);
-  total_price += price;
+  total_price += parseFloat(price);
   number_of_items++;
+  updateCart();
   cart_popup(type, glazing, packSize, price);
+}
+
+function updateCart() {
+  var cartInfo = document.querySelector('.cart-info');
+  cartInfo.innerHTML = number_of_items + ' items<br />Total: $ ' + total_price;
 }
 
 function cart_popup(type, glazing, packSize, price) {
