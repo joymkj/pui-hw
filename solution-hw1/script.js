@@ -30,7 +30,7 @@ function addToCart(event) {
   total_price += price;
   number_of_items++;
 
-  console.log('cart ' + cart);
+  console.log(cart);
 }
 function glazingChange(element) {
   const glazing_price = parseFloat(element.value);

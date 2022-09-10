@@ -25,7 +25,6 @@ nav {
 nav ul {
   list-style-type: none;
   display: inline-block;
-  padding-bottom: 20px;
 }
 nav ul li {
   display: inline-block;
@@ -42,6 +41,12 @@ nav ul li a {
 
 .current-page:hover {
   background-color: #ffff00;
+}
+
+.cart-info {
+  margin: 0 100px 0 0;
+  text-align: right;
+  /* visibility: hidden; */
 }
 
 .header h1 {
