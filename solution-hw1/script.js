@@ -33,8 +33,10 @@ function addToCart(event) {
 }
 
 function cart_popup(type, glazing, packSize, price) {
+  hideCartPopup();
   var popup = document.querySelector('.cart-popup');
   popup.style.visibility = 'visible';
+  clearTimeout();
   popup.innerHTML += '<p><b>' + type + '</b></p>';
   popup.innerHTML += '<p>' + glazing + ' glazing</p>';
   popup.innerHTML += '<p>Pack of ' + packSize + '</p>';
@@ -45,6 +47,8 @@ function cart_popup(type, glazing, packSize, price) {
 function hideCartPopup() {
   var popup = document.querySelector('.cart-popup');
   popup.style.visibility = 'hidden';
+  clearTimeout();
+  popup.innerHTML = '<p>Added to cart: <br /><br /></p>';
 }
 
 function glazingChange(element) {
