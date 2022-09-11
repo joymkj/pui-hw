@@ -25,6 +25,7 @@ nav {
 nav ul {
   list-style-type: none;
   display: inline-block;
+  padding-bottom: 20px;
 }
 nav ul li {
   display: inline-block;
@@ -39,29 +40,9 @@ nav ul li a {
   font-weight: bold;
 }
 
+/*TODO: Ask in class if this is on hover */
 .current-page:hover {
   background-color: #ffff00;
-}
-
-.cart-info {
-  margin: 0 100px 0 0;
-  text-align: right;
-}
-
-.cart-popup {
-  z-index: 1;
-  position: absolute;
-  background-color: white;
-  border: 1px solid;
-  border-color: grey;
-  /* margin-right: 50px; */
-  margin-left: 550px;
-  visibility: hidden;
-}
-
-.cart-popup p {
-  margin: 6px;
-  line-height: 0.8;
 }
 
 .header h1 {
@@ -101,8 +82,7 @@ nav ul li a {
 .product {
   margin: 35px;
 }
-.price,
-.product-name {
+.product h2 {
   font-weight: bold;
   font-size: 25px;
   width: 110%;
@@ -156,7 +136,7 @@ nav ul li a {
   background: url(https://www.shareicon.net/data/16x16/2015/09/15/640844_down_512x512.png) no-repeat calc(100% - 4px);
 }
 
-.add-to-cart {
+.product input[type='submit'] {
   border-width: 3px;
   border-color: black;
   width: 176px;
@@ -166,6 +146,6 @@ nav ul li a {
   font-size: 22px;
 }
 
-.add-to-cart:hover {
+.product input[type='submit']:hover {
   background-color: #ffff00;
 }
