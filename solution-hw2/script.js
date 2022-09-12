@@ -64,7 +64,6 @@ function glazingChange(element) {
   let packSize = product.querySelector('input[name="pack_size"]:checked').value;
   let type = product.getElementsByClassName('product-name')[0].innerText;
   let newPrice = calculatePrice(type, packSize, glazing_price);
-  console.log('newprice ' + newPrice);
   product.getElementsByClassName('price')[0].innerText = '$ ' + newPrice;
 }
 
