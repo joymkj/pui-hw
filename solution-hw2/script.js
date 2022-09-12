@@ -10,22 +10,22 @@ class Roll {
 let cart = [];
 let total_price = 0.0;
 let number_of_items = 0;
-var timeout;
-var addToCartButtons = document.getElementsByClassName('add-to-cart');
+let timeout;
+let addToCartButtons = document.getElementsByClassName('add-to-cart');
 
-for (var i = 0; i < addToCartButtons.length; i++) {
-  var btn = addToCartButtons[i];
+for (let i = 0; i < addToCartButtons.length; i++) {
+  let btn = addToCartButtons[i];
   btn.addEventListener('click', addToCart);
 }
 
 function addToCart(event) {
-  var btn = event.target;
-  var product = btn.closest('.product');
-  var type = product.getElementsByClassName('product-name')[0].innerText;
-  var price = product.getElementsByClassName('price')[0].innerText.replace('$ ', '');
-  var glaze_ref = product.getElementsByClassName('glaze_menu')[0];
-  var glazing = glaze_ref.options[glaze_ref.selectedIndex].text;
-  var packSize = product.querySelector('input[name="pack_size"]:checked').value;
+  let btn = event.target;
+  let product = btn.closest('.product');
+  let type = product.getElementsByClassName('product-name')[0].innerText;
+  let price = product.getElementsByClassName('price')[0].innerText.replace('$ ', '');
+  let glaze_ref = product.getElementsByClassName('glaze_menu')[0];
+  let glazing = glaze_ref.options[glaze_ref.selectedIndex].text;
+  let packSize = product.querySelector('input[name="pack_size"]:checked').value;
   const roll = new Roll(type, price, glazing, packSize);
   cart.push(roll);
   total_price += parseFloat(price);
@@ -35,13 +35,13 @@ function addToCart(event) {
 }
 
 function updateCart() {
-  var cartInfo = document.querySelector('.cart-info');
+  let cartInfo = document.querySelector('.cart-info');
   cartInfo.innerHTML = number_of_items + ' items<br />Total: $ ' + total_price.toFixed(2);
 }
 
 function cart_popup(type, glazing, packSize, price) {
   hideCartPopup();
-  var popup = document.querySelector('.cart-popup');
+  let popup = document.querySelector('.cart-popup');
   popup.style.visibility = 'visible';
   clearTimeout(timeout);
   popup.innerHTML += '<p><b>' + type + '</b></p>';
@@ -52,35 +52,35 @@ function cart_popup(type, glazing, packSize, price) {
 }
 
 function hideCartPopup() {
-  var popup = document.querySelector('.cart-popup');
+  let popup = document.querySelector('.cart-popup');
   popup.style.visibility = 'hidden';
   popup.innerHTML = '<p>Added to cart: <br /><br /></p>';
 }
 
 function glazingChange(element) {
   const glazing_price = parseFloat(element.value);
-  var product = element.closest('.product');
-  var packSize = product.querySelector('input[name="pack_size"]:checked').value;
-  var type = product.getElementsByClassName('product-name')[0].innerText;
-  var newPrice = calculatePrice(type, packSize, glazing_price);
+  let product = element.closest('.product');
+  let packSize = product.querySelector('input[name="pack_size"]:checked').value;
+  let type = product.getElementsByClassName('product-name')[0].innerText;
+  let newPrice = calculatePrice(type, packSize, glazing_price);
   console.log('newprice ' + newPrice);
   product.getElementsByClassName('price')[0].innerText = '$ ' + newPrice;
 }
 
 function updatePackSize(element) {
   const packSize = element.value;
-  var product = element.closest('.product');
-  var type = product.getElementsByClassName('product-name')[0].innerText;
-  var glaze_ref = product.getElementsByClassName('glaze_menu')[0];
-  var glazing_price = parseFloat(glaze_ref.options[glaze_ref.selectedIndex].value);
+  let product = element.closest('.product');
+  let type = product.getElementsByClassName('product-name')[0].innerText;
+  let glaze_ref = product.getElementsByClassName('glaze_menu')[0];
+  let glazing_price = parseFloat(glaze_ref.options[glaze_ref.selectedIndex].value);
   console.log('Pack size: ' + packSize + 'type: ' + type + 'glazing price: ' + glazing_price);
-  var newPrice = calculatePrice(type, packSize, glazing_price);
+  let newPrice = calculatePrice(type, packSize, glazing_price);
   console.log('newprice ' + newPrice);
   product.getElementsByClassName('price')[0].innerText = '$ ' + newPrice;
 }
 
 function calculatePrice(type, packSize, glazing_price) {
-  var basePrice = 0;
+  let basePrice = 0;
   switch (type) {
     case 'Original cinnamon roll':
       basePrice = 2.49;
@@ -106,7 +106,7 @@ function calculatePrice(type, packSize, glazing_price) {
   console.log('Baseprice ' + basePrice);
   console.log('glazing price ' + glazing_price);
   console.log('pack size ' + packSize);
-  var newPrice = parseFloat((basePrice + glazing_price) * packSize).toFixed(2);
+  let newPrice = parseFloat((basePrice + glazing_price) * packSize).toFixed(2);
   console.log('New price' + newPrice);
   return newPrice;
 }
