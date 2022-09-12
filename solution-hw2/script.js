@@ -31,7 +31,8 @@ function addToCart(event) {
   total_price += parseFloat(price);
   number_of_items++;
   updateCart();
-  console.log('Cart:' + cart);
+  console.log('Cart:');
+  console.log(cart);
   cart_popup(type, glazing, packSize, parseFloat(price));
 }
 
