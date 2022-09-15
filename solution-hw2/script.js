@@ -23,7 +23,7 @@ function addToCart(event) {
   let product = btn.closest('.product');
   let type = product.getElementsByClassName('product-name')[0].innerText;
   let price = product.getElementsByClassName('price')[0].innerText.replace('$ ', '');
-  let glaze_ref = product.getElementsByClassName('glaze_menu')[0];
+  let glaze_ref = product.getElementsByClassName('glaze-menu')[0];
   let glazing = glaze_ref.options[glaze_ref.selectedIndex].text;
   let packSize = product.querySelector('input[name="pack_size"]:checked').value;
   const roll = new Roll(type, price, glazing, packSize);
@@ -46,6 +46,7 @@ function cart_popup(type, glazing, packSize, price) {
   let popup = document.querySelector('.cart-popup');
   popup.style.visibility = 'visible';
   clearTimeout(timeout);
+
   popup.innerHTML += '<p><b>' + type + '</b></p>';
   popup.innerHTML += '<p>' + glazing + ' glazing</p>';
   popup.innerHTML += '<p>Pack of ' + packSize + '</p>';
@@ -72,7 +73,7 @@ function updatePackSize(element) {
   const packSize = element.value;
   let product = element.closest('.product');
   let type = product.getElementsByClassName('product-name')[0].innerText;
-  let glaze_ref = product.getElementsByClassName('glaze_menu')[0];
+  let glaze_ref = product.getElementsByClassName('glaze-menu')[0];
   let glazing_price = parseFloat(glaze_ref.options[glaze_ref.selectedIndex].value);
   let newPrice = calculatePrice(type, packSize, glazing_price);
   product.getElementsByClassName('price')[0].innerText = '$ ' + newPrice;
