@@ -103,6 +103,14 @@ function calculatePrice(type, packSize, glazing_price) {
     default:
       console.log('Error in calculating price');
   }
-  let newPrice = parseFloat((basePrice + glazing_price) * packSize).toFixed(2);
+
+  const packPrice = {
+    1: 1,
+    3: 3,
+    6: 5,
+    12: 10,
+  };
+
+  let newPrice = parseFloat((basePrice + glazing_price) * packPrice[packSize]).toFixed(2);
   return newPrice;
 }
